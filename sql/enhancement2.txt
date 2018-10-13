@@ -1,0 +1,15 @@
+
+CREATE TABLE clients( clientId int(10) not null AUTO_INCREMENT PRIMARY KEY, clientFirstName varchar(15), clientLastName varchar(25), clientEmail varchar(40), clientPassword varchar(225), clientLevel ENUM('1','2','3') default '1', comments text );
+
+1- INSERT INTO `clients`(`clientFirstName`, `clientLastName`, `clientEmail`, `clientPassword`, `comments`) VALUES ('Tony', 'Stark', 'tony@starkent.com', 'Iam1ronM@n', "I am the real Ironman")
+
+2- UPDATE `clients` SET `clientLevel`= 3 WHERE clientId = 1
+
+3- UPDATE `inventory` SET `invName` = REPLACE(invName, 'Nylon Rope','Climbing Rope'),`invDescription`= REPLACE(invDescription, 'nylon rope','climbing rope')
+
+4- SELECT inventory.invName, categories.categoryName FROM `inventory` JOIN categories ON (inventory.categoryId = categories.categoryId) WHERE categories.categoryName = 'Misc'
+
+5- DELETE FROM `inventory` WHERE inventory.invId = 7
+
+link sql statement = https://youtu.be/XLsVKPKDjG0
+link conn = https://youtu.be/Yw8Lo1MPLuA
